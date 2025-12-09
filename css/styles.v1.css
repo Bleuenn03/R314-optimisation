@@ -136,14 +136,17 @@ a:hover{opacity:1}
     contain: layout style;
 }
 
-.card img{
-    display:block;
-    width:100%;
-    height:auto;
-    opacity:0;
+.card img {
+    display: block;
+    width: 100%;
+    height: 100%;        /* Remplit la hauteur du card */
+    object-fit: cover;   /* Garde le ratio et remplit le cadre */
+    object-position: center; /* Centre l’image */
+    opacity: 0;
     will-change: opacity;
-    transition:opacity .6s ease;
+    transition: opacity .6s ease;
 }
+
 
 .card img.loaded{
     opacity:1;
