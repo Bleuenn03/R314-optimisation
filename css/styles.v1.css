@@ -1,10 +1,13 @@
-@import url('extra.v1.css');
+/* style.v1.optimized.css — fusion style.css + extra.css */
+
 @font-face {
   font-family: "Poppins";
   src: url("fonts/poppins-regular.woff2") format("woff2");
   font-weight: 300 700;
   font-display: swap;
 }
+
+/* Variables globales */
 :root{
     --bg:#0f1226;
     --fg:#E8ECF1;
@@ -13,9 +16,13 @@
     --accent:#06D6A0;
     --card:#15193A;
     --shadow:rgba(0,0,0,0.45);
+    --shadow-primary: 
+        0 2px 4px rgba(0,0,0,.14),
+        0 8px 24px rgba(0,0,0,.22),
+        0 24px 60px rgba(0,0,0,.18);
 }
 
-*{box-sizing:border-box}
+*{box-sizing:border-box;}
 
 html,body{
     margin:0;
@@ -57,7 +64,7 @@ a:hover{opacity:1}
     font-weight:700;
     letter-spacing:.5px;
 }
-.logo span{color:var(--accent)}
+.logo span{color:var(--accent);}
 
 .menu{
     display:flex;
@@ -69,6 +76,8 @@ a:hover{opacity:1}
     background:
         radial-gradient(1200px 600px at 20% -10%, rgba(124,92,255,.35), transparent 60%),
         radial-gradient(900px 600px at 100% 0%, rgba(6,214,160,.25), transparent 60%);
+    box-shadow: var(--shadow-primary);
+    contain: layout style;
 }
 
 .hero-inner{
@@ -88,7 +97,7 @@ a:hover{opacity:1}
     color:var(--muted);
 }
 
-.highlight{color:var(--accent)}
+.highlight{color:var(--accent);}
 
 .cta{
     display:inline-block;
@@ -96,7 +105,7 @@ a:hover{opacity:1}
     background:var(--primary);
     padding:14px 20px;
     border-radius:12px;
-    box-shadow:0 20px 50px rgba(124,92,255,.35);
+    box-shadow: var(--shadow-primary);
     transition:transform .2s ease, box-shadow .2s ease;
 }
 
@@ -123,7 +132,8 @@ a:hover{opacity:1}
     background:var(--card);
     border-radius:16px;
     overflow:hidden;
-    box-shadow:0 20px 60px var(--shadow);
+    box-shadow: var(--shadow-primary);
+    contain: layout style;
 }
 
 .card img{
@@ -131,6 +141,7 @@ a:hover{opacity:1}
     width:100%;
     height:auto;
     opacity:0;
+    will-change: opacity;
     transition:opacity .6s ease;
 }
 
@@ -148,7 +159,8 @@ a:hover{opacity:1}
     background:var(--card);
     padding:18px;
     border-radius:14px;
-    box-shadow:0 14px 40px var(--shadow);
+    box-shadow: var(--shadow-primary);
+    contain: layout style;
 }
 
 .feature .icon{
