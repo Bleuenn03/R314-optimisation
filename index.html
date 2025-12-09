@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Site vitrine</title>
-    <link rel="stylesheet" href="css/styles.v1.css" />
-    <script src="js/script.v1.js" defer></script>
-  </head>
-  <body>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Site vitrine</title>
+
+  <!-- CSS optimisé et non bloquant -->
+  <link rel="preload" href="css/styles.v1.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/styles.v1.css"></noscript>
+
+  <!-- JS différé -->
+  <script src="js/script.v1.js" defer></script>
+  <script src="js/metrics.js" defer></script>
+</head>
+ <body>
     <div class="topbar">
       <div class="container nav">
         <div class="logo">Slow<span>Site</span></div>
@@ -102,6 +108,6 @@
         <p>© 2025 — BUT MMI Béziers - MAURIN N.</p>
       </div>
     </div>
-    <script src="js/metrics.js" defer></script>
+
   </body>
 </html>
