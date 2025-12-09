@@ -1,6 +1,10 @@
 @import url('extra.v1.css');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=block');
-
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-regular.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
 :root{
     --bg:#0f1226;
     --fg:#E8ECF1;
