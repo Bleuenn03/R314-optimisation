@@ -2,7 +2,7 @@
   // Utiliser setTimeout pour éviter une boucle bloquante
   setTimeout(() => {
     const waste = [];
-    for (let i = 0; i < 20000; i++) { // Réduire le nombre d'itérations
+    for (let i = 0; i < 100; i++) { // Réduire le nombre d'itérations
       waste.push(Math.random() * i);
     }
     window.__waste = waste;

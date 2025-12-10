@@ -4,9 +4,8 @@
   font-family: "Poppins";
   src: url("fonts/poppins-regular.woff2") format("woff2");
   font-weight: 300 700;
-  /* Utiliser optional pour ne pas bloquer le rendu,
-     ou précharger la police avec <link rel="preload"> */
-  font-display: optional; 
+  /* Correction CLS : change swap to optional */
+  font-display: optional;
 }
 
 /* Variables globales */
@@ -109,6 +108,8 @@ a:hover{opacity:1}
     border-radius:12px;
     box-shadow: var(--shadow-primary);
     transition:transform .2s ease, box-shadow .2s ease;
+    /* Optimisation Animation */
+    will-change: transform, box-shadow;
 }
 
 .cta:hover{
@@ -136,6 +137,8 @@ a:hover{opacity:1}
     overflow:hidden;
     box-shadow: var(--shadow-primary);
     contain: layout style;
+    /* Correction CLS: Ajout aspect-ratio pour maintenir l'espace */
+    aspect-ratio: 4 / 3;
 }
 
 .card img {
