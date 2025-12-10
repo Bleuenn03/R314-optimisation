@@ -4,7 +4,9 @@
   font-family: "Poppins";
   src: url("fonts/poppins-regular.woff2") format("woff2");
   font-weight: 300 700;
-  font-display: swap;
+  /* Utiliser optional pour ne pas bloquer le rendu,
+     ou précharger la police avec <link rel="preload"> */
+  font-display: optional; 
 }
 
 /* Variables globales */

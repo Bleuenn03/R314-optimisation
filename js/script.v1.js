@@ -20,13 +20,6 @@
       }
     });
 
-    // Utiliser requestIdleCallback() au lieu de while pour les délais
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => {
-        // Simuler un petit délai sans bloquer le thread principal
-        const t0 = performance.now();
-        while (performance.now() - t0 < 1000) {}
-      });
-    }
+
   });
 })();
