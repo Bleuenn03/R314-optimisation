@@ -4,9 +4,10 @@
   font-family: "Poppins";
   src: url("fonts/poppins-regular.woff2") format("woff2");
   font-weight: 300 700;
-  /* Correction CLS : passer à 'block' et précharger dans le HTML */
-  font-display: block;
+  /* Correction CLS : passer à 'swap' */
+  font-display: swap;
 }
+
 /* Variables globales */
 :root{
     --bg:#0f1226;
@@ -107,8 +108,8 @@ a:hover{opacity:1}
     border-radius:12px;
     box-shadow: var(--shadow-primary);
     transition:transform .2s ease, box-shadow .2s ease;
-    /* Optimisation Animation : Seul le transform doit être optimisé par will-change */
-    will-change: transform; 
+    /* Optimisation Animation : ciblons seulement le 'transform' qui est composable */
+    will-change: transform;
 }
 
 .cta:hover{
