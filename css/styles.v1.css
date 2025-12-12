@@ -133,6 +133,7 @@ a:hover{opacity:1}
 
 .card{
     background:var(--card);
+     aspect-ratio: 4 / 3;
     border-radius:16px;
     overflow:hidden;
     box-shadow: var(--shadow-primary);
@@ -144,11 +145,10 @@ a:hover{opacity:1}
 .card img {
     display: block;
     width: 100%;
-    height: 100%;        /* Remplit la hauteur du card */
-    object-fit: cover;   /* Garde le ratio et remplit le cadre */
-    object-position: center; /* Centre l’image */
+    height: auto;       
+    object-fit: cover;
+    object-position: center;
     opacity: 0;
-    will-change: opacity;
     transition: opacity .6s ease;
 }
 
